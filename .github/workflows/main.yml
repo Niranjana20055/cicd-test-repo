@@ -1,0 +1,8 @@
+name: Test CI Failure
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install missing package
+        run: pip install this-package-does-not-exist-xyz-123
